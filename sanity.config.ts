@@ -1,12 +1,16 @@
 import { defineConfig } from 'sanity';
 import { deskTool } from 'sanity/desk';
+import { presentationTool } from 'sanity/presentation';
 import { visionTool } from '@sanity/vision';
 import { colorInput } from '@sanity/color-input';
 import { media } from 'sanity-plugin-media';
 
+import { locate } from '@/sanity/utils/locate';
 import { schemaTypes } from '@/sanity/schemas';
 import config from '@/sanity/config';
 import { defaultDocumentNode, deskStructure } from '@/sanity/deskStructure';
+
+const SANITY_STUDIO_PREVIEW_URL = process.env.SANITY_STUDIO_PREVIEW_URL || 'http://localhost:3000';
 
 export default defineConfig({
   name: 'default',
@@ -17,6 +21,11 @@ export default defineConfig({
   ...config,
 
   plugins: [
+    presentationTool({
+      // Required: set the base URL to the preview location in the front end
+      previewUrl: SANITY_STUDIO_PREVIEW_URL,
+      locate,
+    }),
     deskTool({
       structure: deskStructure,
       defaultDocumentNode,
