@@ -21,6 +21,7 @@
     "@sanity/image-url": "^1.0.2",
     "@sanity/overlays": "^2.0.1",
     "@sanity/preview-kit": "^3.1.6",
+    "@sanity/react-loader": "^1.0.2",
     "@sanity/ui": "^1.8.2",
     "@sanity/vision": "^3.16.5",
     "@types/node": "20.5.7",

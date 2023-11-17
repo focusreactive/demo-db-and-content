@@ -9,6 +9,8 @@ import { locate } from '@/sanity/utils/locate';
 import { schemaTypes } from '@/sanity/schemas';
 import config from '@/sanity/config';
 import { defaultDocumentNode, deskStructure } from '@/sanity/deskStructure';
+import { client } from '@/sanity/client';
+import { createQueryStore } from '@sanity/react-loader';
 
 const SANITY_STUDIO_PREVIEW_URL = process.env.SANITY_STUDIO_PREVIEW_URL || 'http://localhost:3000';
 
@@ -39,4 +41,8 @@ export default defineConfig({
     // @ts-ignore
     types: schemaTypes,
   },
+});
+
+export const { loadQuery, useQuery, useLiveMode } = createQueryStore({
+  client,
 });
