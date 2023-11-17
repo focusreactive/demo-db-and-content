@@ -138,7 +138,7 @@ const Item = ({ icon, link }: { icon: keyof typeof iconsSet; link: string }) => 
   return (
     <Link href={link || 'https://harcodedsocials.com'} target="_blank" aria-label={icon}>
       {/* @ts-ignore */}
-      <Icon />
+      {Icon && <Icon />}
     </Link>
   );
 };

@@ -14,7 +14,7 @@ export const DynamicPage = ({
   isDraftMode: boolean;
   token: string;
 }) => {
-  if (isDraftMode && token) {
+  if (isDraftMode && token || true) {
     return (
       <PreviewProvider token={token}>
         <PreviewPage initialPage={page} params={{ slug: pageSlug }} />

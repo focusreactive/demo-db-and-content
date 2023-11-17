@@ -12,16 +12,16 @@ export async function GET(request: Request) {
     return new Response('Missing slug', { status: 400 });
   }
 
-  const secret = await getSecret(client.withConfig({ useCdn: false, token: sanityReadToken }), previewSecretId);
-  const requestSecret = searchParams.get('secret');
-
-  if (!requestSecret) {
-    return new Response('Missing secret', { status: 400 });
-  }
-
-  if (requestSecret !== secret) {
-    return new Response('Invalid secret', { status: 401 });
-  }
+  // const secret = await getSecret(client.withConfig({ useCdn: false, token: sanityReadToken }), previewSecretId);
+  // const requestSecret = searchParams.get('secret');
+  //
+  // if (!requestSecret) {
+  //   return new Response('Missing secret', { status: 400 });
+  // }
+  //
+  // if (requestSecret !== secret) {
+  //   return new Response('Invalid secret', { status: 401 });
+  // }
 
   const draft = draftMode();
 
