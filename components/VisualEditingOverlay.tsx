@@ -7,7 +7,7 @@ import { useLiveMode } from '@/sanity.config';
 export const VisualEditingOverlay = () => {
   useEffect(() => enableOverlays(), []);
 
-  useLiveMode({ allowStudioOrigin: 'https://localhost:3000' });
+  useLiveMode({ allowStudioOrigin: 'http://localhost:3000' });
 
   return null;
 };
