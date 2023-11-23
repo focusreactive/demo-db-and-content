@@ -12,6 +12,12 @@ const stegaClient = client.withConfig({
   stega: {
     enabled: true,
     studioUrl: '/admin',
+    filter: (props) => {
+      if (['bgColor', 'sectionConfig'].find((key) => props.sourcePath.includes(key))) {
+        return false;
+      }
+      return props.filterDefault(props);
+    },
   },
 });
 

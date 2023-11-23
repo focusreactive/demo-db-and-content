@@ -15,7 +15,12 @@ const serverClient = client.withConfig({
 
     studioUrl: '/admin',
     enabled: true,
-    // enabled: process.env.VERCEL_ENV !== 'production',
+    filter: (props) => {
+      if (['bgColor', 'sectionConfig'].find((key) => props.sourcePath.includes(key))) {
+        return false;
+      }
+      return props.filterDefault(props);
+    },
   },
 });
 
