@@ -24,8 +24,12 @@ export default defineConfig({
 
   plugins: [
     presentationTool({
-      // Required: set the base URL to the preview location in the front end
-      previewUrl: SANITY_STUDIO_PREVIEW_URL,
+      previewUrl: {
+        origin: typeof location === 'undefined' ? 'http://localhost:3000' : location.origin,
+        draftMode: {
+          enable: '/api/draft',
+        },
+      },
       locate,
     }),
     deskTool({

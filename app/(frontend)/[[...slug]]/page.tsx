@@ -3,9 +3,9 @@ import { notFound } from 'next/navigation';
 import { draftMode } from 'next/headers';
 import { sanityReadToken } from '@/environment';
 import { DynamicPage } from '@/components/DynamicPage';
-import { getPageContent } from '@/model/getPageContent';
 import { Metadata } from 'next';
 import { getPageMetadata } from '@/model/getPageMetadata';
+import { loadPage } from '@/sanity/loader/loadQuery';
 
 type Props = { params: { slug?: string[] } };
 
@@ -54,9 +54,9 @@ export default async function Page({ params }: Props) {
   const isDraftMode = draftMode().isEnabled;
   const pageSlug = slug ? slug.join('/') : '/';
 
-  const page = await getPageContent({ slug: pageSlug });
+  const initial = await loadPage(pageSlug);
 
-  if (!page) return notFound();
+  if (!initial.data) return notFound();
 
-  return <DynamicPage page={page} pageSlug={pageSlug} token={sanityReadToken} isDraftMode={isDraftMode} />;
+  return <DynamicPage initial={initial} pageSlug={pageSlug} token={sanityReadToken} isDraftMode={isDraftMode} />;
 }

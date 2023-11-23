@@ -2,7 +2,7 @@ import { DocumentLocationResolver } from 'sanity/presentation';
 import { map } from 'rxjs';
 
 // Pass 'context' as the second argument
-export function locate(params, context): DocumentLocationResolver {
+export const locate: DocumentLocationResolver = (params, context) => {
   // Set up locations for post documents
   if (params.type === 'dynamicPage') {
     // Subscribe to the latest slug and title
@@ -49,4 +49,4 @@ export function locate(params, context): DocumentLocationResolver {
   }
 
   return null;
-}
+};

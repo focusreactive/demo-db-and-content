@@ -12,7 +12,6 @@ export const getButtonsFragment = (fieldName = 'buttons') => {
 };
 
 export const headerAndFooter = `
-    ...,
     header-> {
       ...,
       ${getButtonsFragment()},

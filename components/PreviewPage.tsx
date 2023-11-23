@@ -1,13 +1,23 @@
 'use client';
 
-import type { SanityDocument } from '@sanity/client';
 import { QueryParams } from '@sanity/client';
-import { useLiveQuery } from '@sanity/preview-kit';
-import { PAGE_CONTENT_QUERY } from '@/model/queries';
 import { Page } from '@/components/Page';
+import { PAGE_CONTENT_QUERY } from '@/model/queries';
+import { useQuery } from '@/sanity/loader/useQuery';
+import { QueryResponseInitial } from '@sanity/react-loader/rsc';
+import { DynamicPagePayload } from '@focusreactive/cms-kit';
 
-export const PreviewPage = ({ initialPage, params }: { initialPage: SanityDocument; params: QueryParams }) => {
-  const [page] = useLiveQuery(initialPage, PAGE_CONTENT_QUERY, params);
+const PreviewPage = ({
+  initial,
+  params,
+}: {
+  initial: QueryResponseInitial<DynamicPagePayload | null>;
+  params: QueryParams;
+}) => {
+  const { data } = useQuery<DynamicPagePayload | null>(PAGE_CONTENT_QUERY, params, { initial });
 
-  return <Page page={page} />;
+  // @ts-ignore
+  return <Page page={data} />;
 };
+
+export default PreviewPage;

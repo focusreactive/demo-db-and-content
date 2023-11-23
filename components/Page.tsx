@@ -1,8 +1,7 @@
-import { Footer, Header } from '@focusreactive/cms-kit';
+import { DynamicPagePayload, Footer, Header } from '@focusreactive/cms-kit';
 import { ContentBlocks } from '@/components/ContentBlocks';
-import { SanityDocument } from 'sanity';
 
-export const Page = ({ page }: { page: SanityDocument }) => {
+export const Page = ({ page }: { page: DynamicPagePayload }) => {
   return (
     <>
       <Header

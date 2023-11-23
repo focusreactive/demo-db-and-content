@@ -11,3 +11,9 @@ export type TitleWithOptions = {
 };
 
 export type ButtonOrLink = { text: string; link: string };
+
+export type DynamicPagePayload = {
+  content: any;
+  header: any;
+  footer: any;
+};
