@@ -1,6 +1,7 @@
 # Demo NextJS13 Sanity
 
-![image](https://github.com/focusreactive/Demo-NextJS13-Sanity/assets/14885189/b687271b-433e-4dd5-bd15-e603563fc464)
+![image](https://github.com/focusreactive/Demo-VisualEditing-Sanity/assets/14885189/cfaa0716-64ad-4778-8171-81e67db0e38a)
+
 
 Welcome to the Next-Sanity Demo repository! This project showcases our cutting-edge solution for creating web applications using Headless CMS (Sanity) and Next.js frontend. With a powerful tech stack and dynamic page generation, this project demonstrates the capabilities of our solution.
 
