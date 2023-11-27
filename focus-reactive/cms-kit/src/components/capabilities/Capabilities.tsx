@@ -182,7 +182,9 @@ const Capability = ({ title, titleIcon, description, image, button, bgColor }: C
   return (
     <StyledCapability color={brandColors[bgColor as keyof typeof brandColors]}>
       <div>
-        <Image src={titleIcon?.src ?? ''} alt={titleIcon?.alt} width={titleIcon?.width} height={titleIcon?.height} />
+        {titleIcon?.src && (
+          <Image src={titleIcon.src} alt={titleIcon?.alt} width={titleIcon?.width} height={titleIcon?.height} />
+        )}
 
         <h3>{title}</h3>
 

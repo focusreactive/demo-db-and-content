@@ -40,7 +40,7 @@ const ImageBlock = (props: any) => {
 
   return (
     <ImageWrap className={className} data-variant={variant} maxWidth={maxWidth} hoverEffect={hoverEffect}>
-      <Image src={image?.src ?? ''} alt={image?.alt} width={image?.width} height={image?.height} />
+      {image?.src && <Image src={image.src} alt={image?.alt} width={image?.width} height={image?.height} />}
     </ImageWrap>
   );
 };
