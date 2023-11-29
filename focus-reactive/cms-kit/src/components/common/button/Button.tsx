@@ -251,7 +251,9 @@ const IconMore = () => {
   );
 };
 
-const ButtonContainer = styled(LinkContainer)``;
+const ButtonContainer = styled(LinkContainer)`
+  outline: inherit;
+`;
 
 const Button = ({
   className,
