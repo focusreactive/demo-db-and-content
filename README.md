@@ -62,7 +62,7 @@ The project utilizes a robust stack of key technologies:
 - **Sanity Client (@sanity/client)**: 6.4.9
 - **next-sanity**: 6.0.3
 - **Linaria (@linaria/core)**: 4.5.4
-- **next-with-linaria**: "0.5.1
+- **next-with-linaria**: 0.5.1
 - **rxjs**: 7.8.1
 - **Node.js**: 18.18.0
 - **TypeScript**: 5.2.2
