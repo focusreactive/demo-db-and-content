@@ -1,6 +1,9 @@
 # Sanity Visual Editing & Live Preview Demo Project
 
-This project demonstrates the integration of Sanity's Visual Editing and Live Preview features with NextJS. Explore our detailed [article](https://dev.to/focusreactive/a-deep-dive-into-sanitys-visual-editing-and-presentation-tool-the-developer-view-513j) for an in-depth understanding. Experience the live demo [here](https://demo-visual-editing-sanity.vercel.app/) and access the deployed Sanity Studio [here](https://demo-visual-editing-sanity.vercel.app/admin/).
+<image src="https://github.com/focusreactive/Demo-VisualEditing-Sanity/assets/14885189/19dfd500-7cfb-4327-b556-69018ce17562" width="300px" align="left" /> We've developed a **demo project** 🚀 to test **Sanity's Visual Editing and Live Preview features with NextJS**. In our [article](https://dev.to/focusreactive/a-deep-dive-into-sanitys-visual-editing-and-presentation-tool-the-developer-view-513j) 📝, we share insights from this experience, aiming to engage both **developers and content creators** 👩‍💻👨‍💻.
+
+Key highlights include **streamlined content management** 📊, **real-time updates** ⏱️, and **enhanced workflow efficiency** 💡. Experience these benefits firsthand through our **live demo** [here](https://demo-visual-editing-sanity.vercel.app/) 🌐 and by exploring the deployed **Sanity Studio** [here](https://demo-visual-editing-sanity.vercel.app/admin/) 🎨.
+
 
 ## Quick Start for Content Creators
 
