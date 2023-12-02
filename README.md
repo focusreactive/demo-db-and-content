@@ -1,50 +1,36 @@
-# Demo NextJS13 Sanity
+# Sanity Visual Editing & Live Preview Demo Project
 
-![image](https://github.com/focusreactive/Demo-VisualEditing-Sanity/assets/14885189/cfaa0716-64ad-4778-8171-81e67db0e38a)
+This project demonstrates the integration of Sanity's Visual Editing and Live Preview features with NextJS. Explore our detailed [article](https://dev.to/focusreactive/a-deep-dive-into-sanitys-visual-editing-and-presentation-tool-the-developer-view-513j) for an in-depth understanding. Experience the live demo [here](https://demo-visual-editing-sanity.vercel.app/) and access the deployed Sanity Studio [here](https://demo-visual-editing-sanity.vercel.app/admin/).
 
+## Quick Start for Content Creators
 
-Welcome to the Next-Sanity Demo repository! This project showcases our cutting-edge solution for creating web applications using Headless CMS (Sanity) and Next.js frontend. With a powerful tech stack and dynamic page generation, this project demonstrates the capabilities of our solution.
+1. Visit the live project [here](https://demo-visual-editing-sanity.vercel.app/).
+2. Interact with the overlays to understand the visual editing features.
+3. Click an overlay to open and edit the corresponding document in [Sanity Studio](https://demo-visual-editing-sanity.vercel.app/admin/).
+4. Observe the changes in real-time with the live preview.
 
-## Tech Stack
+## Article Summary
 
-- Next.js 13 with app router
-- Sanity Headless CMS
-- Linaria for CSS styles
-- Hosted on Vercel
+Our article, "A Deep Dive into Sanity's Visual Editing and Presentation Tool: The Developer View," offers insights into the benefits and technical aspects of using Sanity Studio for visual editing and live preview in web development. It emphasizes the synergy between Sanity's content architecture and the dynamic capabilities of NextJS.
 
-![image](https://github.com/focusreactive/Demo-NextJS13-Sanity/assets/14885189/cec1b74e-8a22-47c6-a040-5cd8a464edf9)
+/Image: Screenshot of key insights from the article
 
-## Features
+## Project Description
 
-- **Performance**: Our solution ensures excellent performance, achieving green scores in core web vitals.
-- **Dynamic Pages**: Say goodbye to editing code for creating new pages. With our CMS integration, you can effortlessly create new pages and customize their content.
-- **Page Composition**: Easily compose pages by dragging and dropping pre-built components. Each component can be populated with content specified in the CMS.
-- **Live Preview**: As you work with content in Sanity Studio, you can instantly preview the page with the current changes, ensuring a seamless editing experience.
-- **Visual Editing**: No more searching for documents and fields in the CMS to edit specific elements. Our visual editing feature allows you to click on an element outline and automatically open the required document for easy editing.
-- **Static Site Generation (SSG) with Dynamic Elements**: Leverage the latest Next.js feature to combine static and dynamic rendering on a single page. Deliver content to users with maximum performance.
-- **Incremental Static Regeneration**: Our web hook connects Sanity Headless CMS with Vercel projects, triggering page regeneration upon content changes. This ensures minimal delay between content updates and production deployment.
+### Technology Highlights
 
-![image](https://github.com/focusreactive/Demo-NextJS13-Sanity/assets/14885189/2d123859-66d3-4b78-9aed-3ed134c2d280)
+- **Sanity Studio**: The central content management system, enabling dynamic content updates and management with rich visual editing features.
+- **NextJS**: Powers the frontend, facilitating the Live Preview feature by integrating seamlessly with Sanity.
+- **Vercel**: Used for hosting, enhancing the visual editing experience with efficient deployment and scalability.
+- **Sanity Overlays & Content Sourcemap**: Innovative features that add context and interactivity to the visual editing process. [More about Sanity Overlays][placeholder].
 
-## Performance
+### Live Preview and Visual Editing
 
-![Pagespeed metrics](https://github.com/focusreactive/Demo-NextJS13-Sanity/assets/14885189/2d2ec80a-c15d-4ff6-8920-6a58424c9073)
+The project showcases how Sanity's live preview and visual editing capabilities can enhance the content creation and development process. With real-time updates and an intuitive interface, content creators and developers can collaborate more effectively.
 
-At FocusReactive, we excel in performance and SEO optimization. Our demo project showcases our expertise in these areas, implementing a performance-wise development strategy and conducting necessary performance checks. We prioritize data fetching, separate code into server and client sides, and carefully manage the loading of resources, including the use of lazy loading and minimizing the amount of JS code executed during page loading. While the screenshots provided here serve as a visual representation, we recommend running the analysis using the provided link to have an own vision. For reliable results, we suggest running the analysis multiple times consecutively.
+/Image: Demonstration of live preview and visual editing features
 
-[Run the performance analysis](https://pagespeed.web.dev/analysis/https-mvp-nextjs-sanity-vercel-app/1crhxzdktn?form_factor=mobile)
-
-It is important to note that this page contains several performance-influencing elements, including multiple pictures, a significant amount of content received from the CMS, numerous animations, and JS code for navigation functionality. While these factors can typically have a negative impact on performance, we have designed our applications to overcome these challenges without compromising UX quality. If your app experiences any of these issues, there's no need to give up on performance. Instead, you can [contact us](https://focusreactive.com/#mail-us) and request our expertise in performance optimization to overcome these challenges.
-
-## Demo
-
-The frontend is deployed on Vecel for public preview https://mvp-nextjs-sanity.vercel.app/
-
-## Contact Us
-
-If you're interested in trying our new solution or have any questions, please feel free to reach out to us via our contact form at https://focusreactive.com/#mail-us. We would love to hear from you and discuss how our solution can meet your specific needs.
-
-## Getting Started
+## Local Development Instructions
 
 To run the development server, follow these steps:
 
@@ -52,17 +38,52 @@ To run the development server, follow these steps:
 2. Install dependencies by running `npm install` or `yarn install`.
 3. Start the development server with `npm run dev` or `yarn dev`.
 4. Open [http://localhost:3000](http://localhost:3000/) in your browser to see the result.
-5. Start editing the page by modifying `app/page.tsx`. The page will auto-update as you make changes.
+5. Access the Sanity Studio locally at [http://localhost:3000/admin](http://localhost:3000/admin).
+6. Edit the `app/page.tsx` file to make changes. The page auto-updates as you edit.
+7. Provide your own project ID in the `/sanity/config.ts` file.
 
-This project utilizes [next/font](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Access to Our Sanity Studio 😎🚀
+
+Don't feel like setting up a new Sanity project from scratch? No worries! You can dive right into our Sanity Studio and see the magic firsthand. Just drop me a message on [Twitter](https://twitter.com/UsulPro) or reach out in the [Sanity Community Slack](https://slack.sanity.io/). I'll get you an exclusive invite! But remember, with great power comes great responsibility... to edit content responsibly! 🕷️
+
+## Technical Details
+
+This project is built using NextJS, focusing on the app router and the Static Site Generation (SSG) approach. The NextJS app router facilitates efficient page routing and dynamic content rendering, while the SSG approach enhances performance, SEO, and scalability.
+
+The project utilizes a robust stack of key technologies:
+
+- **Next.js**: 14.0.3
+- **React**: 18.2.0
+- **Sanity Client (@sanity/client)**: 6.4.9
+- **next-sanity**: 6.0.3
+- **Linaria (@linaria/core)**: 4.5.4
+- **rxjs**: 7.8.1
+- **Node.js**: 18.18.0
+- **TypeScript**: 5.2.2
+
+These technologies have been selected to ensure optimal performance and compatibility for our visual editing and live preview features.
+
+## Contributing to the Project 🤝
+
+We love collaboration! If you're interested in contributing to this project, here's how you can get involved:
+
+1. Fork the repository.
+2. Create a new branch for your feature (`git checkout -b feature/AmazingFeature`).
+3. Commit your changes (`git commit -am 'Add some AmazingFeature'`).
+4. Push to the branch (`git push origin feature/AmazingFeature`).
+
+
+5. Open a pull request.
+
+We're excited to see your innovative ideas and contributions. Let's make web development more visually engaging together!
 
 ## Credits
 
-This project was created at **FocusReactive** - the expert consultancy for the modern web. We specialize in helping clients beat the competition and accelerate business growth. With a deep expertise in headless CMS, NextJS, and eCommerce, we deliver cutting-edge solutions that prioritize your business goals.
+This project was created at **FocusReactive**, the expert consultancy for the modern web. We specialize in helping clients beat the competition and accelerate business growth. With deep expertise in headless CMS, NextJS, and eCommerce, we deliver cutting-edge solutions that prioritize your business goals.
 
 ### Our Expertise
 
-- **Content-Centric Websites**: We have a deep experience building extendable, SEO optimized content and marketing websites with advanced CMS integrations and analytics.
+- **Content-Centric Websites**: We have deep experience in building extendable, SEO-optimized content and marketing websites with advanced CMS integrations and analytics.
 - **Headless eCommerce**: Our next-generation, content-rich, and performant online eCommerce websites come with end-to-end integrations to power your digital business.
 - **Headless CMS Consulting**: We offer multi-channel CMS development, modeling, customization, and support to help you manage your content seamlessly across various platforms.
 - **Web Performance**: Our experts can audit, transform the architecture, and optimize your website to meet the 100 SCORE Core Web Vitals for exceptional web performance.
@@ -71,6 +92,6 @@ If you're looking for expertise in headless CMS, NextJS, or eCommerce, get in to
 
 <image src="https://github.com/focusreactive/MVP-NextJS13-New-Features/assets/14885189/7c67e385-3f79-43e3-ba27-bada1ebddf03" width="500px"/>
 
----
+## License
 
 _This project is licensed under the MIT License. © 2023 FocusReactive._
