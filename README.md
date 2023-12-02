@@ -6,14 +6,15 @@ This project demonstrates the integration of Sanity's Visual Editing and Live Pr
 
 1. Visit the live project [here](https://demo-visual-editing-sanity.vercel.app/).
 2. Interact with the overlays to understand the visual editing features.
-3. Click an overlay to open and edit the corresponding document in [Sanity Studio](https://demo-visual-editing-sanity.vercel.app/admin/).
+3. Click an overlay to be automatically redirected to the corresponding document in [Sanity Studio](https://demo-visual-editing-sanity.vercel.app/admin/) with the editing field opened for immediate editing.
 4. Observe the changes in real-time with the live preview.
 
 ## Article Summary
 
 Our article, "A Deep Dive into Sanity's Visual Editing and Presentation Tool: The Developer View," offers insights into the benefits and technical aspects of using Sanity Studio for visual editing and live preview in web development. It emphasizes the synergy between Sanity's content architecture and the dynamic capabilities of NextJS.
 
-/Image: Screenshot of key insights from the article
+![image](https://github.com/focusreactive/Demo-VisualEditing-Sanity/assets/14885189/ebe2107a-3c35-4863-b3db-063ec5ea7fbb)
+
 
 ## Project Description
 
@@ -28,7 +29,8 @@ Our article, "A Deep Dive into Sanity's Visual Editing and Presentation Tool: Th
 
 The project showcases how Sanity's live preview and visual editing capabilities can enhance the content creation and development process. With real-time updates and an intuitive interface, content creators and developers can collaborate more effectively.
 
-/Image: Demonstration of live preview and visual editing features
+![image](https://github.com/focusreactive/Demo-VisualEditing-Sanity/assets/14885189/84591df6-9c13-41f5-a0bc-d494f64e847e)
+
 
 ## Local Development Instructions
 
