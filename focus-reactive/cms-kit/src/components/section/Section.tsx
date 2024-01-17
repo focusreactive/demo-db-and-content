@@ -21,7 +21,7 @@ const getSectionBgColor = (bgColor?: string) => {
 };
 
 const getSectionTextColor = (bgColor?: string) => {
-  const fallbackColor = '#32408b';
+  const fallbackColor = '#25374c';
   if (!bgColor) return fallbackColor;
   return sectionTextColorsByBg[bgColor as keyof typeof sectionTextColorsByBg] || fallbackColor;
 };

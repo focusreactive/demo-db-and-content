@@ -31,7 +31,7 @@ const StyledCapability = styled.div<{ color?: string }>`
   width: 100%;
   position: relative;
   z-index: 2;
-  color: ${({ color }) => (['#F8F9FB'].includes(color!) ? '#32408b' : '#fff')};
+  color: ${({ color }) => (['#F8F9FB'].includes(color!) ? '#25374c' : '#fff')};
 
   & > div {
     box-shadow: 0px 20px 40px 0px rgba(0, 0, 0, 0.2);

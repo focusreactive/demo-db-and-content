@@ -74,9 +74,9 @@ const Logo = ({ bgColor }: { bgColor: keyof typeof COLORS }) => {
   const { c1 } = COLORS[bgColor] || COLORS.default;
   return (
     <LogoContainer style={{ color: c1 }}>
-      <span>terrific</span>
-      <b>yard</b>
-      <span>💸</span>
+      <span>{'Content & '}</span>
+      <b>DB</b>
+      <span style={{ fontSize: 36, marginLeft: 6 }}>🦛</span>
     </LogoContainer>
   );
 };

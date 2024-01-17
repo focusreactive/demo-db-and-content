@@ -172,7 +172,7 @@ const Hamburger = styled.button<{ burgerColor?: string }>`
 `;
 
 const MenuLinkContainer = styled.span<{ isActive: boolean }>`
-  color: ${({ isActive }) => (isActive ? 'white' : '#32408B')};
+  color: ${({ isActive }) => (isActive ? 'white' : '#25374c')};
   position: relative;
   display: flex;
   height: 40px;
