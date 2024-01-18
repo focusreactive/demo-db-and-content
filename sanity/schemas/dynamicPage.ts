@@ -38,7 +38,7 @@ export const dynamicPage = defineType({
       title: 'For Country',
       type: 'string',
       options: {
-        list: regions,
+        list: regions.map((reg) => ({ value: reg.name, title: reg.title })),
         layout: 'dropdown',
       },
     }),

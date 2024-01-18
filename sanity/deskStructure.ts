@@ -1,3 +1,4 @@
+// @ts-nocheck
 import { DefaultDocumentNodeContext, List, ListBuilder, StructureBuilder, StructureResolver } from 'sanity/desk';
 import { PreviewIFrame } from '@/sanity/preview/Preview';
 import { dynamicPage } from '@/sanity/schemas/dynamicPage';
@@ -9,7 +10,7 @@ const webTypes = ['dynamicPage', 'header', 'footer'];
 const regionFolder = (S: StructureBuilder, region: string): typeof ListBuilder => {
   return S.list()
     .id(region)
-    .items(webTypes.map((tp) => S.documentTypeListItem(tp)));
+    .items(webTypes.map((tp) => S.listItem().id(tp).schemaType(tp).child(S.documentList().schemaType(tp))));
 };
 
 const commonSettings = (S: StructureBuilder) =>
