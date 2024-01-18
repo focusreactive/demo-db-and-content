@@ -1,7 +1,6 @@
 import { defineField } from 'sanity';
 import { HeartFilledIcon, BulbFilledIcon, CreditCardIcon, EditIcon } from '@sanity/icons';
-
-const regions = [{ value: 'de', title: 'DE' }];
+import { regions } from '../regions';
 
 export const review = {
   name: 'review',
@@ -89,7 +88,7 @@ export const casino = {
       type: 'array',
       of: [{ type: 'string' }],
       options: {
-        list: regions,
+        list: regions.map((reg) => ({ value: reg.name, title: reg.title })),
         layout: 'tags',
       },
     }),

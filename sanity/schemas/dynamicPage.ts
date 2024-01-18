@@ -8,6 +8,7 @@ import { documentTitleField } from './common/title';
 import { CgCollage } from 'react-icons/cg';
 import { header } from './common/header';
 import { footer } from './common/footer';
+import { regions } from './regions';
 
 export const dynamicPage = defineType({
   name: 'dynamicPage',
@@ -32,6 +33,15 @@ export const dynamicPage = defineType({
   ],
   fields: [
     documentTitleField,
+    defineField({
+      name: 'country',
+      title: 'For Country',
+      type: 'string',
+      options: {
+        list: regions,
+        layout: 'dropdown',
+      },
+    }),
     defineField({
       name: 'seo',
       title: 'SEO & Metatags',
