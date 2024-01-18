@@ -6,7 +6,7 @@ import { PackageIcon, EarthAmericasIcon } from '@sanity/icons';
 import { regions } from './schemas/regions';
 
 const webTypes = ['dynamicPage', 'header', 'footer'];
-const regionFolder = (S: StructureBuilder, region: string): ListBuilder => {
+const regionFolder = (S: StructureBuilder, region: string): typeof ListBuilder => {
   return S.list()
     .id(region)
     .items(webTypes.map((tp) => S.documentTypeListItem(tp)));
