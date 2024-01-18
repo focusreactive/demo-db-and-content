@@ -1,13 +1,12 @@
-import { DefaultDocumentNodeContext, List, StructureBuilder, StructureResolver } from 'sanity/desk';
+import { DefaultDocumentNodeContext, List, ListBuilder, StructureBuilder, StructureResolver } from 'sanity/desk';
 import { PreviewIFrame } from '@/sanity/preview/Preview';
 import { dynamicPage } from '@/sanity/schemas/dynamicPage';
 import config from '@/sanity/config';
 import { PackageIcon, EarthAmericasIcon } from '@sanity/icons';
 import { regions } from './schemas/regions';
 
-
 const webTypes = ['dynamicPage', 'header', 'footer'];
-const regionFolder = (S: StructureBuilder, region: string): List => {
+const regionFolder = (S: StructureBuilder, region: string): ListBuilder => {
   return S.list()
     .id(region)
     .items(webTypes.map((tp) => S.documentTypeListItem(tp)));
