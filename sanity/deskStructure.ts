@@ -16,7 +16,7 @@ const regionFolder = (S: StructureBuilder, region: string): typeof ListBuilder =
           .id(tp)
           .title(tp)
           .schemaType(tp)
-          .child(S.documentList().id(tp).schemaType(tp).filter('country == $region').params({ region })),
+          .child(S.documentList().id(tp).schemaType(tp).filter('country == $region && _type == "dynamicPage"').params({ region })),
       ),
     );
 };
