@@ -1,11 +1,11 @@
 import { styled } from '@linaria/react';
 import React from 'react';
-import { appTheme } from '../../../theme';
+// import { appTheme } from '../../../theme';
 
 const TitleBlockWrap = styled.div<{ color?: string }>`
   position: relative;
   width: 100%;
-  --titleColor: ${({ color }) => (color ? color : appTheme.colors.black)};
+  --titleColor: #333333;
 `;
 
 const Tip = styled.p`
@@ -18,7 +18,7 @@ const Tip = styled.p`
   font-weight: 400;
   margin: 0 0 4px;
 
-  ${appTheme.media.lg} {
+  @media screen and (min-width: 1140px) {
     margin: 0 0 10px;
     font-size: 14px;
   }
@@ -43,28 +43,19 @@ const TitleIcon = styled.div`
     transform: translateY(-50%);
   }
 
-  ${appTheme.media.md} {
+  @media screen and (min-width: 768px) {
     width: 40px;
     height: 40px;
     margin-bottom: 42px;
   }
 
-  /* &[data-variant='small'] {
-    width: 15px;
-    margin-bottom: 15px;
-
-    ${appTheme.media.lg} {
-      width: 30px;
-      margin-bottom: 25px;
-    }
-  } */
 
   &[data-variant='large'] {
     width: 35px;
     height: 35px;
     margin-bottom: 25px;
 
-    ${appTheme.media.lg} {
+    @media screen and (min-width: 1140px) {
       width: 50px;
       height: 50px;
       margin-bottom: 42px;
@@ -79,7 +70,7 @@ const TitleWrap = styled.h2`
   font-size: 25px;
   line-height: 1.32;
 
-  ${appTheme.media.lg} {
+  @media screen and (min-width: 1140px) {
     font-size: 34px;
     line-height: 1.2;
     margin-bottom: 30px;
@@ -89,7 +80,7 @@ const TitleWrap = styled.h2`
     font-size: 22px;
     line-height: 1.32;
 
-    ${appTheme.media.lg} {
+    @media screen and (min-width: 1140px) {
       font-size: 26px;
       line-height: 1.32;
       margin-bottom: 30px;
@@ -100,11 +91,11 @@ const TitleWrap = styled.h2`
     font-size: 34px;
     line-height: 1.2;
 
-    ${appTheme.media.md} {
+    @media screen and (min-width: 768px) {
       font-size: 42px;
     }
 
-    ${appTheme.media.lg} {
+    @media screen and (min-width: 1140px) {
       font-size: 52px;
       line-height: 1.18;
       margin-bottom: 40px;

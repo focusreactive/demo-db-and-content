@@ -1,6 +1,5 @@
 import { styled } from '@linaria/react';
 import React from 'react';
-import { appTheme } from '../../../theme';
 import CountrySwitchWrapper from './CountrySwitchWrapper';
 import Image from 'next/image';
 import globe from '../../../assets/globe.svg';
@@ -20,15 +19,10 @@ const ContactsWrap = styled.div`
   }
 `;
 
-const ContactImage = styled.img<{ width?: number }>`
-  width: ${({ width }) => (width ? width : 16)}px;
-  height: 16px;
-`;
-
 const ContactsItemWrap = styled.div<{ color?: string }>`
   display: flex;
   align-items: center;
-  color: ${({ color }) => (color ? color : appTheme.colors.white)};
+  color: #FFFFFF;
 
   &:not(:first-child) {
     margin: 15px 0 0;
@@ -36,7 +30,7 @@ const ContactsItemWrap = styled.div<{ color?: string }>`
 
   img {
     margin: 0 12px 0 0;
-    fill: ${appTheme.colors.blue400};
+    fill: #25374c;
   }
 `;
 

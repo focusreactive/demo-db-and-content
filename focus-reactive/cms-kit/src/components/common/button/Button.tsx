@@ -2,16 +2,16 @@ import React from 'react';
 
 import { styled } from '@linaria/react';
 import SmartLink from '../smart-link/SmartLink';
-import { appTheme } from '../../../theme';
+// import { appTheme } from '../../../theme';
 
 const ArrowMoreWrap = styled.svg`
   margin-left: 10px;
 
-  ${appTheme.media.md} {
+  @media screen and (min-width: 768px) {
     margin-left: 18px;
   }
 
-  ${appTheme.media.lg} {
+  @media screen and (min-width: 1140px) {
     margin-left: 26px;
   }
 `;
@@ -66,18 +66,18 @@ const LinkContainer = styled(SmartLink)`
   background: transparent;
   border: 2px solid transparent;
   font-weight: var(--btnFontWeight, 700);
-  --textColor: ${appTheme.colors.black};
-  --backgroundColor: ${appTheme.colors.white};
-  --borderColor: ${appTheme.colors.transparent};
+  --textColor: #333333;
+  --backgroundColor: #FFFFFF;
+  --borderColor: transparent;
   --shadowColor: var(--backgroundColor);
   color: var(--textColor);
 
-  ${appTheme.media.sm} {
+  @media screen and (min-width: 576px) {
     min-width: 122px;
     padding: 0 20px;
   }
 
-  ${appTheme.media.md} {
+  @media screen and (min-width: 768px) {
     min-width: 138px;
   }
 
@@ -157,52 +157,52 @@ const LinkContainer = styled(SmartLink)`
   }
 
   &[data-variant='white'] {
-    --textColor: ${appTheme.colors.blue400};
-    --backgroundColor: ${appTheme.colors.white};
-    --borderColor: ${appTheme.colors.transparent};
+    --textColor: #25374c;
+    --backgroundColor: #FFFFFF;
+    --borderColor: transparent;
   }
 
   &[data-variant='blue'] {
-    --textColor: ${appTheme.colors.white};
-    --backgroundColor: ${appTheme.colors.blue400};
-    --borderColor: ${appTheme.colors.transparent};
+    --textColor: #FFFFFF;
+    --backgroundColor: #25374c;
+    --borderColor: transparent;
   }
 
   &[data-variant='green'] {
-    --textColor: ${appTheme.colors.white};
-    --backgroundColor: ${appTheme.colors.green400};
-    --borderColor: ${appTheme.colors.transparent};
+    --textColor: #FFFFFF;
+    --backgroundColor: #1EB280;
+    --borderColor: transparent;
   }
 
   &[data-variant='red'] {
-    --textColor: ${appTheme.colors.white};
-    --backgroundColor: ${appTheme.colors.red400};
-    --borderColor: ${appTheme.colors.transparent};
+    --textColor: #FFFFFF;
+    --backgroundColor: #F0484F;
+    --borderColor: transparent;
   }
 
   &[data-variant='violet'] {
-    --textColor: ${appTheme.colors.white};
-    --backgroundColor: ${appTheme.colors.violet400};
-    --borderColor: ${appTheme.colors.transparent};
+    --textColor: #FFFFFF;
+    --backgroundColor: #822E81;
+    --borderColor: transparent;
   }
 
   &[data-variant='yellow'] {
-    --textColor: ${appTheme.colors.white};
-    --backgroundColor: ${appTheme.colors.yellow400};
-    --borderColor: ${appTheme.colors.transparent};
+    --textColor: #FFFFFF;
+    --backgroundColor: #FFA300;
+    --borderColor: transparent;
   }
 
   &[data-variant='bordered'] {
-    --textColor: ${appTheme.colors.white};
-    --backgroundColor: ${appTheme.colors.transparent};
-    --borderColor: ${appTheme.colors.currentColor};
-    --shadowColor: ${appTheme.colors.white};
+    --textColor: #FFFFFF;
+    --backgroundColor: transparent;
+    --borderColor: currentColor;
+    --shadowColor: #FFFFFF;
   }
 
   &[data-variant='transparent'] {
-    --textColor: ${appTheme.colors.blue400};
+    --textColor: #25374c;
     --backgroundColor: transparent;
-    --borderColor: ${appTheme.colors.transparent};
+    --borderColor: transparent;
     min-width: 0;
     padding: 0;
 
@@ -219,7 +219,7 @@ const LinkContainer = styled(SmartLink)`
   }
 
   &[data-is-active='false'] {
-    --textColor: ${appTheme.colors.violet400};
+    --textColor: #822E81;
     --backgroundColor: transparent;
     opacity: 0.5;
 
@@ -233,9 +233,9 @@ const LinkContainer = styled(SmartLink)`
   }
 
   &[data-is-active='true'] {
-    --textColor: ${appTheme.colors.violet400};
-    --backgroundColor: ${appTheme.colors.transparent};
-    border-color: ${appTheme.colors.currentColor};
+    --textColor: #822E81;
+    --backgroundColor: transparent;
+    border-color: currentColor;
 
     &:before {
       display: none;
