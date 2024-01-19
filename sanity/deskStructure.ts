@@ -10,7 +10,15 @@ const webTypes = ['dynamicPage', 'header', 'footer'];
 const regionFolder = (S: StructureBuilder, region: string): typeof ListBuilder => {
   return S.list()
     .id(region)
-    .items(webTypes.map((tp) => S.listItem().id(tp).schemaType(tp).child(S.documentList().schemaType(tp))));
+    .items(
+      webTypes.map((tp) =>
+        S.listItem()
+          .id(tp)
+          .title(tp)
+          .schemaType(tp)
+          .child(S.documentList().id(tp).schemaType(tp).filter('country == $region').params({ region })),
+      ),
+    );
 };
 
 const commonSettings = (S: StructureBuilder) =>
@@ -30,7 +38,11 @@ export const deskStructure: StructureResolver = (S) => {
     .title('Regions')
     .items([
       ...regions.map((reg) =>
-        S.listItem().id(reg.name).title(reg.title).icon(EarthAmericasIcon).child(regionFolder(S, reg.name)),
+        S.listItem()
+          .id(reg.name)
+          .title(reg.title)
+          .icon(() => reg.icon)
+          .child(regionFolder(S, reg.name)),
       ),
       commonSettings(S),
     ]);

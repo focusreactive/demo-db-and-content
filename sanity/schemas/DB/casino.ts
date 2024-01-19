@@ -1,5 +1,5 @@
 import { defineField } from 'sanity';
-import { HeartFilledIcon, BulbFilledIcon, CreditCardIcon, EditIcon } from '@sanity/icons';
+import { HeartFilledIcon, BulbOutlineIcon, CreditCardIcon, EditIcon } from '@sanity/icons';
 import { regions } from '../regions';
 
 export const review = {
@@ -13,7 +13,7 @@ export const review = {
       title: 'For Country',
       type: 'string',
       options: {
-        list: regions,
+        list: regions.map((reg) => ({ value: reg.name, title: reg.title })),
         layout: 'dropdown',
       },
     }),
@@ -89,14 +89,14 @@ export const casino = {
       of: [{ type: 'string' }],
       options: {
         list: regions.map((reg) => ({ value: reg.name, title: reg.title })),
-        layout: 'tags',
+        layout: 'grid',
       },
     }),
     defineField({
       name: 'reviews',
       title: 'Available Reviews',
       type: 'array',
-      of: [{ type: review.name }],
+      of: [{ type: 'reference', to: [{ type: review.name }] }],
     }),
   ],
 };
@@ -105,7 +105,7 @@ export const casinoStudio = {
   name: 'studio',
   title: 'Casino Studio',
   type: 'document',
-  icon: BulbFilledIcon,
+  icon: BulbOutlineIcon,
   fields: [
     defineField({
       name: 'title',
@@ -116,6 +116,9 @@ export const casinoStudio = {
       name: 'slug',
       title: 'Slug',
       type: 'slug',
+      options: {
+        source: 'title',
+      },
     }),
     defineField({
       name: 'image',
@@ -123,10 +126,15 @@ export const casinoStudio = {
       type: 'image',
     }),
     defineField({
+      name: 'description',
+      title: 'About the Studio',
+      type: 'text',
+    }),
+    defineField({
       name: 'games',
       title: 'Games',
       type: 'array',
-      of: [{ type: casino.name }],
+      of: [{ type: 'reference', to: [{ type: casino.name }] }],
     }),
   ],
 };
