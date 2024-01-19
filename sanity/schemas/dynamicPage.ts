@@ -9,6 +9,7 @@ import { CgCollage } from 'react-icons/cg';
 import { header } from './common/header';
 import { footer } from './common/footer';
 import { regions } from './regions';
+import { casinoList } from './contentBlocks/casinoList';
 
 export const dynamicPage = defineType({
   name: 'dynamicPage',
@@ -73,7 +74,9 @@ export const dynamicPage = defineType({
       name: 'content',
       title: 'Content Blocks',
       type: 'array',
-      of: [hero, logos, capabilities, about, customerSpotlight].map((block) => defineArrayMember({ type: block.name })),
+      of: [hero, logos, capabilities, about, customerSpotlight, casinoList].map((block) =>
+        defineArrayMember({ type: block.name }),
+      ),
     }),
   ],
 });
