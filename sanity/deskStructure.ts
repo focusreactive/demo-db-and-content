@@ -6,7 +6,7 @@ import config from '@/sanity/config';
 import { PackageIcon, EarthAmericasIcon } from '@sanity/icons';
 import { regions } from './schemas/regions';
 
-const webTypes = ['dynamicPage', 'header', 'footer'];
+const webTypes = ['dynamicPage', 'review', 'header', 'footer'];
 const regionFolder = (S: StructureBuilder, region: string): typeof ListBuilder => {
   return S.list()
     .id(region)
@@ -16,7 +16,9 @@ const regionFolder = (S: StructureBuilder, region: string): typeof ListBuilder =
           .id(tp)
           .title(tp)
           .schemaType(tp)
-          .child(S.documentList().id(tp).schemaType(tp).filter('country == $region && _type == "dynamicPage"').params({ region })),
+          .child(
+            S.documentList().id(tp).schemaType(tp).filter('country == $region && _type == $tp').params({ region, tp }),
+          ),
       ),
     );
 };
