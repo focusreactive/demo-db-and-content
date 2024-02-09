@@ -34,7 +34,6 @@ export default function VisualEditing() {
   }, [router]);
   useEffect(() => {
     const disable = enableOverlays({
-      allowStudioOrigin,
       history: {
         subscribe: (navigate) => {
           setNavigate(() => navigate);
